@@ -1,0 +1,87 @@
+<html> 
+<head> 
+<title></title> 
+</head> 
+<body> 
+<center> 
+<h1> <font face="Arial"> DATABASE MANAGEMENT SYSTEMS </font> </h1> 
+<br> 
+<br> 
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/57/RDBMS_structure.png" alt="great" border="0"> 
+<br> 
+<br> 
+<h4> <font face="Arial"> Database is an organized repository of data and processed data or information that is kept in data dictionary and meta data or data about data . <br> 
+provides multiple views of data and supports multiple user access to data <br> data redundancy is removed through normalization <br><br> this is unlike the file processing , where data is not centralized and kept <br> individually in separate files and that it does not <br> provide multiple user access and does not support multiple views of data <br> data can be redundant and normalization of data is absent </font> </h4> 
+<br><br> 
+<h2> <font face="Arial"> TYPES OF DATABASE SYSTEM </font> </h2> 
+<br> 
+<UL type="square"> <LI> View level </LI> <LI> Logical </LI> <LI> Physical </LI> </UL> 
+<BR> 
+<UL type="square"> 
+<LI> VIEW LEVEL : <br> this describes data at the highest level of data abstraction that is the view level. this type of database can be ERD or entity relationship diagram and OODBMS  or object oriented database <br> ERD <br> consists of entities and their associated characteristics or attributes and relationships . some of extended ER  properties are specialization , generalization and aggregation . <br> this type of database system shows data abstraction , polymorphism and attribute inheritance . there is one level of data abstraction present. <br> while specialization is represented through ISA ,  generalization is simple inversion to specialization <br> it is not possible to express nested relations in RDBMS  due to aggregation that does not support nested queries </LI> 
+<LI> oodbms : OBJECT ORIENTED DATABASE SYSTEM ---- variant of the view level. consists of objects and classes where class is a containership and class instance is an object . shows inheritance , data abstraction and attribute inheritance . there are two levels of data abstraction present </LI> 
+<LI> LOGICAL : describes data at logical and view levels . can be : <br> relational database : consists of data organized in tables and identified through key values . the intersection of a row and column is a tuple and the tabular representation shows integrity constraints as entity , referential and domain integrity . </LI> 
+<LI> Network data model : here data is organized as linked lists and any arbitrary graph representation is possible . </LI> 
+<LI> Hierarchical data model : consists of data organized as fixed format records in linked lists and there are pointers to identify lists . any arbitrary graph representation is not possible <br> only tree representation is possible . consists of virtual records  .  VIRTUAL RECORD  is a data piece that contains no data item but includes a pointer to the first physical record . when data is to be replicated in several database trees , we keep a copy of that record in one of the trees and replace every other copy with a virtual record </LI> 
+<LI> PHYSICAL :  describes data at the physical level of data abstraction. can be frame memory model etc </LI> 
+</UL> 
+<BR> 
+<BR> 
+<img src="https://image.slidesharecdn.com/databasemanagementsystem-161020091729/95/database-management-system-9-638.jpg?cb=1476955074" alt="great" border="0"> 
+<br> 
+<h4> <font face="Arial"> TOP 10 DBMS SOFTWARE </font> </h4> 
+<br> 
+<UL type="square"> 
+<LI> ORACLE RDBMS </LI> 
+<LI> IBM DB2</LI> 
+<LI> MICROSOFT SQL SERVER </LI> 
+<LI> SAP SYBASE ASE </LI> 
+<LI> TERADATA </LI> 
+<LI> ADABAS </LI> 
+<LI> MYSQL </LI> 
+<LI> FILEMAKER </LI> 
+<LI> MICROSOFT ACCESS </LI> 
+<LI> INFORMIX </LI> 
+</UL> 
+<BR> 
+<BR> 
+<h4> <font face="Arial"> SQL  or structured query language is database language and is relationally complete language <br> it can be : <UL type="square"> <LI> data definition language : (DDL) examples : SQL  commands like CREATE , DROP  , INSERT etc </LI> <LI> data manipulation language : (DML) <BR> includes SQL  commands like SELECT , DELETE , UPDATE , MODIFY etc </LI> <LI> DCL  or data control language <br> includes SQL  commands like GRANT , REVOKE etc to generate authorization rights to users  of database </LI> </UL> </font> </h4> 
+<br> 
+<br> 
+<img src="https://image.slidesharecdn.com/dbms-091020055115-phpapp01/95/relational-database-management-system-26-728.jpg?cb=1256017898" alt="great" border="0"> 
+<br> 
+<br> 
+<h4> MAIN COMPONENTS TO DBMS <br>  Structure of Database is called Database Schema.
+ Instance, which is a state of the database with the actual data loaded.
+? A set of software tools/programs which access, update and
+ process the database, called the query and update-mechanism.</h4> 
+<br> 
+<br> 
+<h4><font face="Arial"> database definitions <br> EXISTENCE DEPENDENCIES :  if in a relation schema , the existence of entity x depends on that of entity y , it is existence dependencies and operationally if y is deleted , so is x. here x is dominant entity and y is subordinate entity </font></h4> 
+<h4> <font face="Arial"> TYPES OF FUNCTIONAL DEPENDENCIES <br> FULL FUNCTIONAL DEPENDENCY : if in relation schema , all non key attributes are wholly dependent on the key attribute , it is full functional dependency <br> PARTIAL DEPENDENCY :  if in schema , some non key attributes are dependent on the key attribute and the remaining non key attributes are dependent on key attribute and some other non key attribute , this functional dependency generated <br> TRANSITIVE DEPENDENCY : if in schema, the attributes in key column of one relation are dependent on key values in column of another relation , this holds good . <br> MULTI VALUED DEPENDENCY <br> seen in 4th normal form of relation schema <br> JOIN DEPENDENCY : seen in the project join normal form </font> </h4> 
+<br> 
+<br> 
+<h4> <font face="Arial"> the most reliable and efficient database storage is stable storage . </font> </h4> 
+<br> 
+<h4> <font face="Arial"> THE MOST USEFUL DATABASE RECOVERY MECHANISM IS LOG BASED RECOVERY <br> log is a sequence of log records and keeps a recohrd of all database modification in the system. various types of log records available . no database modification can occur when log is in progress . <br> as the log is written onto stable storage and info. residing in stable storage is never lost theoretically speaking , most database system use log . actual recovery scheme depends on whether the immediate or deferred database of log based recovery is used </font></h4> 
+<br> 
+<h4> <font face="Arial"> An alternative to log based recovery is SHADOW PAGING . Shadow paging is more faster than log based recovery but suffers from drawbacks like commit overhead , data fragmentation and garbage collection </font> </h4> 
+<br> 
+<img src="https://s-media-cache-ak0.pinimg.com/originals/9d/06/aa/9d06aac2a473ac22021fae8ccbac4d0c.png" alt="great" border="0"> 
+<br> <br> 
+<img src="https://www.relationaldbdesign.com/relational-database-design/module2/images/rdbms_fb1.gif" alt="great" border="0"> 
+<br> 
+<img src="http://www.securevault.com/wp-content/uploads/2015/07/app-dev-new.png" alt="great" border="0"> 
+<br> 
+<img src="http://www-03.ibm.com/ibm/history/ibm100/images/icp/F552744R55349E50/us__en_us__ibm100__relational_database__how_works__620x350.jpg" alt="ibm" border="0"> 
+<img src="http://www-03.ibm.com/ibm/history/ibm100/images/icp/R148363U39464E72/us__en_us__ibm100__relational_database__system_Illustration__620x350.gif" alt="ibm" border="0"> 
+<img src="https://image.slidesharecdn.com/cdocumentsandsettingsuser1desktop2-dbmsexamples-091012013049-phpapp01/95/dbms-an-example-5-728.jpg?cb=1280287853" alt="ibm" border="0"> 
+<img src="https://ipt12.wikispaces.com/file/view/Database_Management_System.jpg" alt="ibm" border="0"> 
+<img src="http://rdbms.opengrass.net/1_Overview/i/1.3_DatabaseConcepts.gif" alt="ibm" border="0"> 
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpJ043D2LvtLvTBFlXYNDpV-mDrAh_U2VK0X-uTAQmGCaCa314" alt="tuple" border="0"> 
+</center> 
+<center> 
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH0XY0uhzY4AwBPwBVDyAtBnbCnK7tOppYnLwzqZP0vOzGOODl" alt="great" border="0"> 
+</center> 
+</body> 
+</html> 
