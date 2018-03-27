@@ -1,0 +1,376 @@
+<html> 
+<head> 
+<title></title> 
+</head> 
+<body> 
+<center> 
+<h1> DBMS </h1> 
+<br> 
+<img src="https://docs.microsoft.com/en-us/sql/ssms/visual-db-tools/media/dv3w7c1.gif" alt="great" border="0"> 
+<br> 
+<A HREF="https://docs.microsoft.com/en-us/sql/ssms/visual-db-tools/design-database-diagrams-visual-database-tools" > MICROSOFT </A> 
+<br> 
+<h4> the topic applies to <br> <ul type="square"> <li> sql server </li> <li> Azure SQL database </li> <li> Azure SQL Data Warehouse </li> <li> parallel Data Warehouse </li> </ul> <br> 
+The Database Designer is a visual tool that allows you to design and visualize a database to which you are connected. When designing a database, you can use Database Designer to create, edit, or delete tables, columns, keys, indexes, relationships, and constraints. To visualize a database, you can create one or more diagrams illustrating some or all of the tables, columns, keys, and relationships in it.<br> 
+For any database, you can create as many database diagrams as you like; each database table can appear on any number of diagrams. Thus, you can create different diagrams to visualize different portions of the database, or to accentuate different aspects of the design. For example, you can create a large diagram showing all tables and columns, and you can create a smaller diagram showing all tables without showing the columns.
+
+Each database diagram you create is stored in the associated database.<br> 
+Tables and Columns in a Database Diagram
+Within a database diagram, each table can appear with three distinct features: a title bar, a row selector, and a set of property columns.
+
+Title Bar The title bar shows the name of the table
+
+If you have modified a table and have not yet saved it, an asterisk (*) appears at the end of the table name to indicate unsaved changes. For information about saving modified tables and diagrams, see Work with Database Diagrams (Visual Database Tools)
+
+Row Selector You can click the row selector to select a database column in the table. The row selector displays a key symbol if the column is in the table's primary key. For information about primary keys, see Working with Keys (Visual Database Tools).
+
+Property Columns The set of property columns is visible only in the certain views of your table. You can view a table in any of five different views to help you manage the size and layout of your diagram.
+
+For more information about table views, see Customize the Amount of Information Displayed in Diagrams (Visual Database Tools).
+
+Relationships in a Database Diagram
+Within a database diagram, each relationship can appear with three distinct features: endpoints, a line style, and related tables.
+
+Endpoints The endpoints of the line indicate whether the relationship is one-to-one or one-to-many. If a relationship has a key at one endpoint and a figure-eight at the other, it is a one-to-many relationship. If a relationship has a key at each endpoint, it is a one-to-one relationship.
+
+Line Style The line itself (not its endpoints) indicates whether the Database Management System (DBMS) enforces referential integrity for the relationship when new data is added to the foreign-key table. If the line appears solid, the DBMS enforces referential integrity for the relationship when rows are added or modified in the foreign-key table. If the line appears dotted, the DBMS does not enforce referential integrity for the relationship when rows are added or modified in the foreign-key table.
+
+Related Tables The relationship line indicates that a foreign-key relationship exists between one table and another. For a one-to-many relationship, the foreign-key table is the table near the line's figure-eight symbol. If both endpoints of the line attach to the same table, the relationship is a reflexive relationship. For more information, see Draw Reflexive Relationships (Visual Database Tools).
+
+In this Section<br> 
+<a href="#Understand Database Diagram Ownership (Visual Database Tools)"> Understand Database Diagram Ownership (Visual Database Tools)</a> 
+
+<a href="#Navigate in Database Diagram Designer (Visual Database Tools)"> Navigate in Database Diagram Designer (Visual Database Tools)</a> 
+
+<a href="#Set Up Database Diagram Designer (Visual Database Tools)"> Set Up Database Diagram Designer (Visual Database Tools)</a> 
+
+<a href="#Upgrade Database Diagrams from Previous Editions (Visual Database Tools)"> Upgrade Database Diagrams from Previous Editions (Visual Database Tools)</a> 
+
+<a href="#Open Database Diagram Designer (Visual Database Tools)"> Open Database Diagram Designer (Visual Database Tools)</a> 
+</h4> 
+<br> 
+</center> 
+<center> 
+<h1> RDBMS </h1> 
+</center> 
+<h4> <font face="Arial"> rdbms is an organized repository of data and processed data or information that is kept in centealized data server and it provides multiple user acess and provides multiple views of data  it supports normalization or removal of data redundancy from existing tables  / relations</font>  </h4> 
+<br> 
+<h1> DIFFERENCE BETWEEN RDBMS AND FILE PROCESSING SYSTEMS </h1> 
+<br> 
+<table width="60%" border="2"> 
+<tr> 
+<td> in rdbms , data is kept consolidated in centralized data server </td> 
+<td> in file processing systems , data is kept separately in individual files </td> 
+</tr> 
+<tr> 
+<td> rdbms provides multiple views of data to users </td> 
+<td> in file processing , does not provide multiple views </td> 
+</tr> 
+<tr> 
+<td> provides multiple user access to data </td> 
+<td> file processing ---- does not provide multiple user access to data </td> 
+</tr> 
+<tr> 
+<td> rdbms supports normalization </td> 
+<td> data is redundant in file processing </td> 
+</tr> 
+</table> 
+<center> 
+<marquee behavior="slide"> <h2> <I> RDBMS provides data abstraction and attribute inheritance </I> </h2> </marquee> 
+<br> 
+<h1> <font face="Arial"> TYPES OF DATABASE SYSTEMS </font> </h1> 
+<ul type="round"> 
+<li> <h4> <font face="Arial"> view level database design </font> </h4> </li> 
+<li> <h4> <font face="Arial"> logical design </font> </h4> </li> 
+<li> <h4> <font face="Arial"> physical level design </font> </h4> </li> 
+</ul> 
+<br> 
+<br> 
+<h2> <font face="Arial"> view level database design </font> </h2> 
+<br> 
+<h4> <font face="Arial"> describes data at logical and view levels . view level is highest level of data abstraction and describes part of dbms to users  . it can be ERDs , Object oriented dbms etc . <br> ERD consists of entity , attributes and relation sets . some of ER  properties are generalization , specialization and aggregation . generalization is simple inversion to specialization and where the design process proceeds in a bottom up manner where low level entity sets are grouped into one high level entity set based on <br> commonality of attributes. some of extended ER properties as seen here are attribute inheritance and <br> data abstraction. <br> whereas , specialization is simple inversion to generalization and design process proceeds in a top down manner where high level entity sets are first defined and based on the distinctness of their attributes , they are divided into low level subordinate entity sets . data abstraction, attribute inheritance are seen here . <br> specialization is represented in ERD  through ISA . Whereas , another extended ER  property is Aggregation which does not support nested queries . </font> </h4> 
+<br> 
+<h4> <font face="Arial"> object oriented databases ---- defines objects and classes where class is a containership = state + behaviour and an object is a class instance . there are two levels of data abstraction here </font> </h4> 
+<br> 
+<br> 
+<h2> <font face="Arial"> logical level design </font> </h2> 
+<br> 
+<h4> <font face="Arial"> describes what data exist and what rels. exist amongst stored data without going into physical implementation of same . can be <ul type="round"> <li> relational systems </li> <li> network data model </li> <li> hierarchical data model </li> </ul> </font> </h4> 
+<br> 
+<h2> RELATIONAL SYSTEMS </h2> 
+<br> 
+<h4> consists of data organized in tables and linked by key values . </h4> 
+<br> 
+<h2> NETWORK DATA MODEL </h2> 
+<br> 
+<h4> consists of data organized as records in linked lists and indexed by pointers . any arbitrary graph representation is possible . </h4> 
+<br> 
+<h2> HIERARCHICAL DATA MODEL </h2> 
+<br> 
+<h4> consists of data in linked lists and indexed through pointers . any arbitrary graph representation is not possible, only tree representation is possible. consists of virtual records where virtual record contains no data item but includes a logical pointer to 1st physical record. <br> when data is to be replicated in several database trees, we keep a copy of that record in one of the trees and replace every other copy with virtual record, including logical pointer to 1st physical record </h4> 
+<br> 
+<br> 
+<h2> PHYSICAL DESIGN </h2> 
+<br> 
+<h4> describes data at lowest level of data abstraction, the physical level. examples , frame memory model etc </h4> 
+<br> 
+<br> 
+<h1> AZURE DATABASE ARCHITECTURE APPLICATION GUIDE </h1> 
+<br> 
+<img src="https://docs.microsoft.com/en-us/azure/architecture/guide/images/guide-steps.svg" alt="great" border="0"> 
+<br> 
+<h2> This guide presents a structured approach for designing applications on Azure that are scalable, resilient, and highly available. It is based on proven practices that we have learned from customer engagements.</h2> 
+<br> 
+<br> 
+<h4> The cloud is changing the way applications are designed. Instead of monoliths, applications are decomposed into smaller, decentralized services. These services communicate through APIs or by using asynchronous messaging or eventing. Applications scale horizontally, adding new instances as demand requires.
+
+These trends bring new challenges. Application state is distributed. Operations are done in parallel and asynchronously. The system as a whole must be resilient when failures occur. Deployments must be automated and predictable. Monitoring and telemetry are critical for gaining insight into the system. The Azure Application Architecture Guide is designed to help you navigate these changes.</h4> 
+<br> 
+<br> 
+<h2> <ul type="square"> <li> Modern cloud is decomposed , de-centralized </li> <li> design for scale </li> <li> polyglot persistence [mix of storage technologies] </li> <li> Eventual consistency </li> <li> parallel and asynchronous processing </li> <li>mean time to repair [MTTR] </li><li> frequent small updates </li> <li> automated self management </li> <li> immutable infrastructure</li> </ul> 
+</h2> 
+<h4> This guide is intended for application architects, developers, and operations teams. It's not a how-to guide for using individual Azure services. After reading this guide, you will understand the architectural patterns and best practices to apply when building on the Azure cloud platform.
+
+How this guide is structured
+The Azure Application Architecture Guide is organized as a series of steps, from the architecture and design to implementation. For each step, there is supporting guidance that will help you with the design of your application architecture.
+
+Architecture styles. The first decision point is the most fundamental. What kind of architecture are you building? It might be a microservices architecture, a more traditional N-tier application, or a big data solution. We have identified seven distinct architecture styles. There are benefits and challenges to each.
+
+? Azure Reference Architectures show recommended deployments in Azure, along with considerations for scalability, availability, manageability, and security. Most also include deployable Resource Manager templates.
+
+Technology Choices. Two technology choices should be decided early on, because they affect the entire architecture. These are the choice of compute and storage technologies. The term compute refers to the hosting model for the computing resources that your applications runs on. Storage includes databases but also storage for message queues, caches, IoT data, unstructured log data, and anything else that an application might persist to storage.
+
+? Compute options and Storage options provide detailed comparison criteria for selecting compute and storage services.
+
+Design Principles. Throughout the design process, keep these ten high-level design principles in mind.
+
+? Best practices articles give specific guidance on areas such as auto-scaling, caching, data partitioning, API design, and others.
+
+Pillars. A successful cloud application will focus on these five pillars of software quality: Scalability, availability, resiliency, management, and security.
+
+? Use our Design review checklists to review your design according to these quality pillars.
+
+Cloud Design Patterns. These design patterns are useful for building reliable, scalable, and secure applications on Azure. Each pattern describes a problem, a pattern that addresses the problem, and an example based on Azure.
+
+? View the complete Catalog of cloud design patterns.</h4> 
+<br> 
+<br> 
+<h1> Architecture styles</h1>
+<h4> An architecture style is a family of architectures that share certain characteristics. For example, N-tier is a common architecture style. More recently, microservice architectures have started to gain favor. Architecture styles don't require the use of particular technologies, but some technologies are well-suited for certain architectures. For example, containers are a natural fit for microservices.
+
+We have identified a set of architecture styles that are commonly found in cloud applications. The article for each style includes:
+
+A description and logical diagram of the style.
+Recommendations for when to choose this style.
+Benefits, challenges, and best practices.
+A recommended deployment using relevant Azure services.</h4> 
+<br> 
+<br> 
+<br> 
+<br> 
+<h2> A quick tour of the styles
+This section gives a quick tour of the architecture styles that we've identified, along with some high-level considerations for their use. Read more details in the linked topics.</h2> 
+<br> 
+<br> 
+<table width="60%" border="2"> 
+<tr> 
+<td> <img src="https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/images/n-tier-sketch.svg" alt="great" border="0"></td> 
+<td> <h4> N-tier is a traditional architecture for enterprise applications. Dependencies are managed by dividing the application into layers that perform logical functions, such as presentation, business logic, and data access. A layer can only call into layers that sit below it. However, this horizontal layering can be a liability. It can be hard to introduce changes in one part of the application without touching the rest of the application. That makes frequent updates a challenge, limiting how quickly new features can be added.
+
+N-tier is a natural fit for migrating existing applications that already use a layered architecture. For that reason, N-tier is most often seen in infrastructure as a service (IaaS) solutions, or application that use a mix of IaaS and managed services.</h4> </td> 
+</tr> 
+<tr> 
+<td> <img src="https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/images/web-queue-worker-sketch.svg" alt="great" border="0"> </td> 
+<td> <h4> For a purely PaaS solution, consider a Web-Queue-Worker architecture. In this style, the application has a web front end that handles HTTP requests and a back-end worker that performs CPU-intensive tasks or long-running operations. The front end communicates to the worker through an asynchronous message queue.
+
+Web-queue-worker is suitable for relatively simple domains with some resource-intensive tasks. Like N-tier, the architecture is easy to understand. The use of managed services simplifies deployment and operations. But with a complex domains, it can be hard to manage dependencies. The front end and the worker can easily become large, monolithic components that are hard to maintain and update. As with N-tier, this can reduce the frequency of updates and limit innovation.</h4></td> 
+</tr> 
+<tr> 
+<td> <img src="https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/images/microservices-sketch.svg" alt="great" border="0"></td> 
+<td> <h4> If your application has a more complex domain, consider moving to a Microservices architecture. A microservices application is composed of many small, independent services. Each service implements a single business capability. Services are loosely coupled, communicating through API contracts.
+
+Each service can be built by a small, focused development team. Individual services can be deployed without a lot of coordination between teams, which encourages frequent updates. A microservice architecture is more complex to build and manage than either N-tier or web-queue-worker. It requires a mature development and DevOps culture. But done right, this style can lead to higher release velocity, faster innovation, and a more resilient architecture.</h4> </td> 
+</tr> 
+<tr> 
+<td> <img src="https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/images/cqrs-sketch.svg" alt="great" border="0"></td> 
+<td> <h4> The CQRS (Command and Query Responsibility Segregation) style separates read and write operations into separate models. This isolates the parts of the system that update data from the parts that read the data. Moreover, reads can be executed against a materialized view that is physically separate from the write database. That lets you scale the read and write workloads independently, and optimize the materialized view for queries.
+
+CQRS makes the most sense when it's applied to a subsystem of a larger architecture. Generally, you shouldn't impose it across the entire application, as that will just create unneeded complexity. Consider it for collaborative domains where many users access the same data.</h4> </td> 
+</tr> 
+<tr> 
+<td> <img src="https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/images/event-driven-sketch.svg" alt="great" border="0"></td> 
+<td> <h4> Event-Driven Architectures use a publish-subscribe (pub-sub) model, where producers publish events, and consumers subscribe to them. The producers are independent from the consumers, and consumers are independent from each other.
+
+Consider an event-driven architecture for applications that ingest and process a large volume of data with very low latency, such as IoT solutions. The style is also useful when different subsystems must perform different types of processing on the same event data.</h4> </td> 
+</tr> 
+</table> 
+<br> 
+<h1> Big Data, Big Compute</h1> 
+<br> 
+<h4> Big Data, Big Compute
+Big Data and Big Compute are specialized architecture styles for workloads that fit certain specific profiles. Big data divides a very large dataset into chunks, performing paralleling processing across the entire set, for analysis and reporting. Big compute, also called high-performance computing (HPC), makes parallel computations across a large number (thousands) of cores. Domains include simulations, modeling, and 3-D rendering.
+
+Architecture styles as constraints
+An architecture style places constraints on the design, including the set of elements that can appear and the allowed relationships between those elements. Constraints guide the "shape" of an architecture by restricting the universe of choices. When an architecture conforms to the constraints of a particular style, certain desirable properties emerge.
+
+For example, the constraints in microservices include:
+
+A service represents a single responsibility.
+Every service is independent of the others.
+Data is private to the service that owns it. Services do not share data.
+By adhering to these constraints, what emerges is a system where services can be deployed independently, faults are isolated, frequent updates are possible, and it's easy to introduce new technologies into the application.
+
+Before choosing an architecture style, make sure that you understand the underlying principles and constraints of that style. Otherwise, you can end up with a design that conforms to the style at a superficial level, but does not achieve the full potential of that style. It's also important to be pragmatic. Sometimes it's better to relax a constraint, rather than insist on architectural purity.
+
+The following table summarizes how each style manages dependencies, and the types of domain that are best suited for each.
+
+Architecture style	Dependency management	Domain type
+N-tier	Horizontal tiers divided by subnet	Traditional business domain. Frequency of updates is low.
+Web-Queue-Worker	Front and backend jobs, decoupled by async messaging.	Relatively simple domain with some resource intensive tasks.
+Microservices	Vertically (functionally) decomposed services that call each other through APIs.	Complicated domain. Frequent updates.
+CQRS	Read/write segregation. Schema and scale are optimized separately.	Collaborative domain where lots of users access the same data.
+Event-driven architecture.	Producer/consumer. Independent view per sub-system.	IoT and real-time systems
+Big data	Divide a huge dataset into small chunks. Parallel processing on local datasets.	Batch and real-time data analysis. Predictive analysis using ML.
+Big compute	Data allocation to thousands of cores.	Compute intensive domains such as simulation.
+Consider challenges and benefits
+Constraints also create challenges, so it's important to understand the trade-offs when adopting any of these styles. Do the benefits of the architecture style outweigh the challenges, for this subdomain and bounded context.
+
+Here are some of the types of challenges to consider when selecting an architecture style:
+
+Complexity. Is the complexity of the architecture justified for your domain? Conversely, is the style too simplistic for your domain? In that case, you risk ending up with a "ball of mud", because the architecture does not help you to manage dependencies cleanly.
+
+Asynchronous messaging and eventual consistency. Asynchronous messaging can be used to decouple services, and increase reliability (because messages can be retried) and scalability. However, this also creates challenges such as always-once semantics and eventual consistency.
+
+Inter-service communication. As you decompose an application into separate services, there is a risk that communication between services will cause unacceptable latency or create network congestion (for example, in a microservices architecture).
+
+Manageability. How hard is it to manage the application, monitor, deploy updates, and so on?</h4> 
+<br> 
+<br> 
+<h1> BIG DATA ARCHITECTURAL STYLE </h1> 
+<img src="https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/images/big-data-logical.svg" alt="great" border="0"> 
+<br> 
+<h2> A big data architecture is designed to handle the ingestion, processing, and analysis of data that is too large or complex for traditional database systems.</h2> 
+<br> 
+<br> 
+<h4> Big data solutions typically involve one or more of the following types of workload:
+
+Batch processing of big data sources at rest.
+Real-time processing of big data in motion.
+Interactive exploration of big data.
+Predictive analytics and machine learning.
+Most big data architectures include some or all of the following components:
+
+Data sources: All big data solutions start with one or more data sources. Examples include:
+
+Application data stores, such as relational databases.
+Static files produced by applications, such as web server log files.
+Real-time data sources, such as IoT devices.
+Data storage: Data for batch processing operations is typically stored in a distributed file store that can hold high volumes of large files in various formats. This kind of store is often called a data lake. Options for implementing this storage include Azure Data Lake Store or blob containers in Azure Storage.
+
+Batch processing: Because the data sets are so large, often a big data solution must process data files using long-running batch jobs to filter, aggregate, and otherwise prepare the data for analysis. Usually these jobs involve reading source files, processing them, and writing the output to new files. Options include running U-SQL jobs in Azure Data Lake Analytics, using Hive, Pig, or custom Map/Reduce jobs in an HDInsight Hadoop cluster, or using Java, Scala, or Python programs in an HDInsight Spark cluster.
+
+Real-time message ingestion: If the solution includes real-time sources, the architecture must include a way to capture and store real-time messages for stream processing. This might be a simple data store, where incoming messages are dropped into a folder for processing. However, many solutions need a message ingestion store to act as a buffer for messages, and to support scale-out processing, reliable delivery, and other message queuing semantics. Options include Azure Event Hubs, Azure IoT Hubs, and Kafka.
+
+Stream processing: After capturing real-time messages, the solution must process them by filtering, aggregating, and otherwise preparing the data for analysis. The processed stream data is then written to an output sink. Azure Stream Analytics provides a managed stream processing service based on perpetually running SQL queries that operate on unbounded streams. You can also use open source Apache streaming technologies like Storm and Spark Streaming in an HDInsight cluster.
+
+Analytical data store: Many big data solutions prepare data for analysis and then serve the processed data in a structured format that can be queried using analytical tools. The analytical data store used to serve these queries can be a Kimball-style relational data warehouse, as seen in most traditional business intelligence (BI) solutions. Alternatively, the data could be presented through a low-latency NoSQL technology such as HBase, or an interactive Hive database that provides a metadata abstraction over data files in the distributed data store. Azure SQL Data Warehouse provides a managed service for large-scale, cloud-based data warehousing. HDInsight supports Interactive Hive, HBase, and Spark SQL, which can also be used to serve data for analysis.
+
+Analysis and reporting: The goal of most big data solutions is to provide insights into the data through analysis and reporting. To empower users to analyze the data, the architecture may include a data modeling layer, such as a multidimensional OLAP cube or tabular data model in Azure Analysis Services. It might also support self-service BI, using the modeling and visualization technologies in Microsoft Power BI or Microsoft Excel. Analysis and reporting can also take the form of interactive data exploration by data scientists or data analysts. For these scenarios, many Azure services support analytical notebooks, such as Jupyter, enabling these users to leverage their existing skills with Python or R. For large-scale data exploration, you can use Microsoft R Server, either standalone or with Spark.
+
+Orchestration: Most big data solutions consist of repeated data processing operations, encapsulated in workflows, that transform source data, move data between multiple sources and sinks, load the processed data into an analytical data store, or push the results straight to a report or dashboard. To automate these workflows, you can use an orchestration technology such Azure Data Factory or Apache Oozie and Sqoop.
+
+Azure includes many services that can be used in a big data architecture. They fall roughly into two categories:
+
+Managed services, including Azure Data Lake Store, Azure Data Lake Analytics, Azure Data Warehouse, Azure Stream Analytics, Azure Event Hub, Azure IoT Hub, and Azure Data Factory.
+Open source technologies based on the Apache Hadoop platform, including HDFS, HBase, Hive, Pig, Spark, Storm, Oozie, Sqoop, and Kafka. These technologies are available on Azure in the Azure HDInsight service.
+These options are not mutually exclusive, and many solutions combine open source technologies with Azure services.
+
+When to use this architecture
+Consider this architecture style when you need to:
+
+Store and process data in volumes too large for a traditional database.
+Transform unstructured data for analysis and reporting.
+Capture, process, and analyze unbounded streams of data in real time, or with low latency.
+Use Azure Machine Learning or Microsoft Cognitive Services.
+Benefits
+Technology choices. You can mix and match Azure managed services and Apache technologies in HDInsight clusters, to capitalize on existing skills or technology investments.
+Performance through parallelism. Big data solutions take advantage of parallelism, enabling high-performance solutions that scale to large volumes of data.
+Elastic scale. All of the components in the big data architecture support scale-out provisioning, so that you can adjust your solution to small or large workloads, and pay only for the resources that you use.
+Interoperability with existing solutions. The components of the big data architecture are also used for IoT processing and enterprise BI solutions, enabling you to create an integrated solution across data workloads.
+Challenges
+Complexity. Big data solutions can be extremely complex, with numerous components to handle data ingestion from multiple data sources. It can be challenging to build, test, and troubleshoot big data processes. Moreover, there may be a large number of configuration settings across multiple systems that must be used in order to optimize performance.
+Skillset. Many big data technologies are highly specialized, and use frameworks and languages that are not typical of more general application architectures. On the other hand, big data technologies are evolving new APIs that build on more established languages. For example, the U-SQL language in Azure Data Lake Analytics is based on a combination of Transact-SQL and C#. Similarly, SQL-based APIs are available for Hive, HBase, and Spark.
+Technology maturity. Many of the technologies used in big data are evolving. While core Hadoop technologies such as Hive and Pig have stabilized, emerging technologies such as Spark introduce extensive changes and enhancements with each new release. Managed services such as Azure Data Lake Analytics and Azure Data Factory are relatively young, compared with other Azure services, and will likely evolve over time.
+Security. Big data solutions usually rely on storing all static data in a centralized data lake. Securing access to this data can be challenging, especially when the data must be ingested and consumed by multiple applications and platforms.
+Best practices
+Leverage parallelism. Most big data processing technologies distribute the workload across multiple processing units. This requires that static data files are created and stored in a splittable format. Distributed file systems such as HDFS can optimize read and write performance, and the actual processing is performed by multiple cluster nodes in parallel, which reduces overall job times.
+
+Partition data. Batch processing usually happens on a recurring schedule — for example, weekly or monthly. Partition data files, and data structures such as tables, based on temporal periods that match the processing schedule. That simplifies data ingestion and job scheduling, and makes it easier to troubleshoot failures. Also, partitioning tables that are used in Hive, U-SQL, or SQL queries can significantly improve query performance.
+
+Apply schema-on-read semantics. Using a data lake lets you to combine storage for files in multiple formats, whether structured, semi-structured, or unstructured. Use schema-on-read semantics, which project a schema onto the data when the data is processing, not when the data is stored. This builds flexibility into the solution, and prevents bottlenecks during data ingestion caused by data validation and type checking.
+
+Process data in-place. Traditional BI solutions often use an extract, transform, and load (ETL) process to move data into a data warehouse. With larger volumes data, and a greater variety of formats, big data solutions generally use variations of ETL, such as transform, extract, and load (TEL). With this approach, the data is processed within the distributed data store, transforming it to the required structure, before moving the transformed data into an analytical data store.
+
+Balance utilization and time costs. For batch processing jobs, it's important to consider two factors: The per-unit cost of the compute nodes, and the per-minute cost of using those nodes to complete the job. For example, a batch job may take eight hours with four cluster nodes. However, it might turn out that the job uses all four nodes only during the first two hours, and after that, only two nodes are required. In that case, running the entire job on two nodes would increase the total job time, but would not double it, so the total cost would be less. In some business scenarios, a longer processing time may be preferable to the higher cost of using under-utilized cluster resources.
+
+Separate cluster resources. When deploying HDInsight clusters, you will normally achieve better performance by provisioning separate cluster resources for each type of workload. For example, although Spark clusters include Hive, if you need to perform extensive processing with both Hive and Spark, you should consider deploying separate dedicated Spark and Hadoop clusters. Similarly, if you are using HBase and Storm for low latency stream processing and Hive for batch processing, consider separate clusters for Storm, HBase, and Hadoop.
+
+Orchestrate data ingestion. In some cases, existing business applications may write data files for batch processing directly into Azure storage blob containers, where they can be consumed by HDInsight or Azure Data Lake Analytics. However, you will often need to orchestrate the ingestion of data from on-premises or external data sources into the data lake. Use an orchestration workflow or pipeline, such as those supported by Azure Data Factory or Oozie, to achieve this in a predictable and centrally manageable fashion.
+
+Scrub sensitive data early. The data ingestion workflow should scrub sensitive data early in the process, to avoid storing it in the data lake.
+</h4> 
+<br> 
+<br> 
+<img src="https://www.blackbaud.com/files/support/guides/infinitydevguide/Subsystems/infintro-developer-help/Content/Resources/Images/Introduction/WorkflowDiagramForASpec.png" alt="great" border="0"> 
+<br> 
+<h2> BLACKBAUD DEVELOPER NETWORK </h2> 
+<h4> Application Software Engineers, Custom Solution Developers, and IT Administrators use the same mechanism to extend and build applications on the Infinity platform. Infinity has an XML-based metadata catalog system that uses XML schema definitions to define various features/parts of an application. A catalog on the Infinity platform contains one or more related "specs" (catalog items). A catalog item is an XML document based on a schema that describes a particular type of feature available on the Infinity platform. Examples of a few features types are data forms, data lists, pages, and record operations. The schemas wrap up most of the standards and tenets of the Infinity platform. The Infinity platform allows developers to load XML catalog items/specs into the platform. After they are loaded into the system, these specs are typically referred to as "features." The XML specs must conform to schemas defined in the platform or they cannot be loaded. Since the platform knows what elements to expect in any particular spec type when it is loaded, the platform knows how consume and render that spec type.
+
+What is a Catalog?
+
+A catalog is an assembly that contains embedded catalog items as resources. Custom catalog assemblies built by third-party developers will deploy to the bin\custom folder on the application server. During run-time, the Infinity platform scans the deploy\bin directory to determine the list of available catalog items for the application. As a result, an administrator of the application may copy additional custom catalog assemblies after install to make catalog items available to the application and allow for great flexibility in customizing an application on the Infinityplatform. The Infinityplatform also looks for individual catalog items (XML documents) in the deploy\bin directory in addition to the catalog assemblies.
+
+Even though a catalog item is available as a result of deployment, Infinity will not create the features and entities associated with the catalog item until it is loaded into the database.
+
+How Are Specs Loaded into the Catalog?
+
+Infinity provides various ways to load a catalog item including the CatalogBrowserLoadCatalogItem web service method, a command line utility, and the load spec service revision. All of the ways of loading catalog items invoke the same CLR stored procedure (USP_LOADSPEC) to process the item and create the various objects in the database.</h4> 
+<br> 
+<br> 
+<h2> Enable transformative data insights
+Transform your business through predictive analytics over all of your data with tools you already know and love—Power BI, Excel, and third-party BI tools. Plus, seamless compatibility with machine learning, ingestion, data movement, and data store services ensures transformative insights over all your data.
+
+
+“With Azure SQL Data Warehouse, we use PolyBase to ingest data from HDInsight then run thousands of analytical queries per day over tens of billions of records—about 20TB of data. This enables us to monitor price history and market dynamics to adjust pricing and ensure we’re offering our customers the best price.”
+Christoph Leinemann, Senior Director Data Engineering </h2> 
+<br> 
+<br> 
+<h1> Scale with more freedom</h1> 
+<h1> Get up and running quickly
+Provision a data warehouse solution in 3 to 5 minutes. Azure uniquely scales your compute in seconds—delivering the promise of cloud elasticity to data warehousing. Use T-SQL skills to ingest and query data from on-premises and cloud sources—all for approximately 10x the value of traditional solutions.</h1> 
+<h1> Protect and help secure data
+Gain multiple layers of data protection—starting with data encryption and auditing. Azure uniquely offers threat detection which functions like an alarm system over your data. Also, support for Azure Active Directory helps limit BI access to the appropriate subset of the data to further support compliance policies.</h1> 
+<br> 
+<br> 
+<table width="60%" border="2"> 
+<tr> 
+<td> sql data warehouse </td> 
+<td> azure analysis services </td> 
+<td> data factory </td> 
+</tr> 
+<tr> 
+<td> elastic data warehouse with services and enterprise class features </td> 
+<td> enterprise grade analytic engine as a service </td> 
+<td> hybrid data injection at enterprise scale , made easy </td> 
+</tr> 
+<tr> 
+<td> <img src="https://106c4.wpc.azureedge.net/80106C4/Gallery-Prod/cdn/2015-02-24/prod20161101-microsoft-windowsazure-gallery/atscale.atscaleatscale.1.0.0/Icons/Large.png" alt="great" border="0"> </td> 
+<td> <img src="https://106c4.wpc.azureedge.net/80106C4/Gallery-Prod/cdn/2015-02-24/prod20161101-microsoft-windowsazure-gallery/bluetalon.bluetalonbluetalon.1.50.80/Icons/Large.png" alt="great" border="0"></td> 
+<td> <img src="https://106c4.wpc.azureedge.net/80106C4/Gallery-Prod/cdn/2015-02-24/prod20161101-microsoft-windowsazure-gallery/informatica.powercenterpowercenter.1.0.9/Icons/Large.png" alt="great" border="0"></td> 
+</tr> 
+
+</table> 
+</center> 
+</body> 
+</html> 
+
